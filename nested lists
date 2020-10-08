@@ -1,0 +1,15 @@
+marksheet=[]
+marklist=[]
+n=int(input())
+for i in range(n):
+    name=input()
+    score=float(input())
+    record=[name,score]
+    marksheet.append(record)
+    marklist.append(score)
+
+marksheet.sort()
+second_lw_score=sorted(set(marklist))[1]
+for i,j in marksheet:
+    if j==second_lw_score:
+        print(i)
